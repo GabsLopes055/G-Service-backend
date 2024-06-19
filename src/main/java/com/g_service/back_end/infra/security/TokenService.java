@@ -4,8 +4,9 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.g_service.back_end.domain.user.User;
+import com.g_service.back_end.domain.user.Usuario;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -15,12 +16,12 @@ import java.time.ZoneOffset;
 @Service
 public class TokenService {
 
-    @Value("${chave.secret.token.jwt}")
-    private String chaveToken;
+//    @Value("${chave.secret.token.jwt}")
+    private String chaveToken = "MINHA_CHAVE_SECRETA";
 
     Algorithm algorithm = Algorithm.HMAC256(chaveToken);
 
-    public String retornaToken(User user) {
+    public String retornaToken(Usuario user) {
 
         try {
 

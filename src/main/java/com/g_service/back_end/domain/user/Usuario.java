@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -28,9 +28,9 @@ public class User {
 
     private String senha;
 
-    private LocalDateTime dataCadastro;
-
     private tipoUsuario tipoUsuario;
+
+    private LocalDateTime dataCadastro;
 
     @PrePersist
     private void prePersist() {

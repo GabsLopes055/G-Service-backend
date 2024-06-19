@@ -1,7 +1,7 @@
 package com.g_service.back_end.infra.security;
 
-import com.g_service.back_end.domain.repositories.UserRepository;
-import com.g_service.back_end.domain.user.User;
+import com.g_service.back_end.domain.repositories.UsuarioRepository;
+import com.g_service.back_end.domain.user.Usuario;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -23,7 +23,7 @@ public class SecurityFilter extends OncePerRequestFilter {
     TokenService tokenService;
 
     @Autowired
-    UserRepository userRepository;
+    UsuarioRepository userRepository;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -33,7 +33,7 @@ public class SecurityFilter extends OncePerRequestFilter {
         String usuario = tokenService.validarToken(token);
 
         if (usuario != null) {
-            User user = userRepository.findByUsuario(usuario).orElseThrow(() -> new RuntimeException("Usuário não encontrado (METODO: doFilterInternal)"));
+            Usuario user = userRepository.findByUsuario(usuario).orElseThrow(() -> new RuntimeException("Usuário não encontrado (METODO: doFilterInternal)"));
             var authorities = Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
             var authentication = new UsernamePasswordAuthenticationToken(user, null, authorities);
             SecurityContextHolder.getContext().setAuthentication(authentication);
