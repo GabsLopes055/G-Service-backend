@@ -1,4 +1,4 @@
-package com.g_service.back_end.domain.tipoUsuario;
+package com.g_service.back_end.domain.tipoPermissao;
 
 public enum tipoUsuario {
     USUARIO,

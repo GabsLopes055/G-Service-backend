@@ -23,13 +23,8 @@ public class UsuarioController {
     @PostMapping(value = "/registrar")
     public ResponseEntity<UsuarioResponse> cadastrarUsuario(@RequestBody UsuarioRequest usuarioRequest) {
 
-        UsuarioResponse userResponse = service.registrarUsuario(usuarioRequest);
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.registrarUsuario(usuarioRequest));
 
-        if (userResponse == null) {
-            return ResponseEntity.badRequest().build();
-        }
-
-        return ResponseEntity.status(HttpStatus.CREATED).body(userResponse);
 
     }
 }

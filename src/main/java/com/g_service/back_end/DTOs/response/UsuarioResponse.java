@@ -20,7 +20,7 @@ public class UsuarioResponse {
 
     private String email;
 
-    private com.g_service.back_end.domain.tipoUsuario.tipoUsuario tipoUsuario;
+    private com.g_service.back_end.domain.tipoPermissao.tipoUsuario tipoUsuario;
 
     private LocalDateTime dataCadastro;
 

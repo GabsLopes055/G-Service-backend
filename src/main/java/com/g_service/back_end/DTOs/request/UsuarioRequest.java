@@ -1,6 +1,6 @@
 package com.g_service.back_end.DTOs.request;
 
-import com.g_service.back_end.domain.tipoUsuario.tipoUsuario;
+import com.g_service.back_end.domain.tipoPermissao.tipoUsuario;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

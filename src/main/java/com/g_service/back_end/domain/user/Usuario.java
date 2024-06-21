@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import com.g_service.back_end.domain.tipoUsuario.tipoUsuario;
+import com.g_service.back_end.domain.tipoPermissao.tipoUsuario;
 import java.time.LocalDateTime;
 
 @Entity

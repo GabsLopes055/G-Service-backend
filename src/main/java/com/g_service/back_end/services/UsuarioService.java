@@ -4,6 +4,7 @@ import com.g_service.back_end.DTOs.request.UsuarioRequest;
 import com.g_service.back_end.DTOs.response.UsuarioResponse;
 import com.g_service.back_end.domain.repositories.UsuarioRepository;
 import com.g_service.back_end.domain.user.Usuario;
+import com.g_service.back_end.services.exceptions.UsuarioJaExisteCadastrado;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -36,7 +37,7 @@ public class UsuarioService {
             return new UsuarioResponse().userResponse(retornarUsuario);
 
         } else {
-            return null;
+            throw new UsuarioJaExisteCadastrado("Já existe um registro com esse nome de usuário");
         }
 
     }
