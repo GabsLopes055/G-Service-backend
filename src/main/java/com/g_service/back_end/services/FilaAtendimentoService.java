@@ -63,4 +63,16 @@ public class FilaAtendimentoService {
         return FilaAtendimentoResponse.fromEntity(salvarFila);
 
     }
+
+    /*metodo para deletar uma fila*/
+    public void deletarFilaAtendimento(String idFila) {
+
+        Optional<FilaAtendimento> filaAtendimento = repository.findById(idFila);
+
+        if(filaAtendimento.isEmpty()) {
+            throw new FilaAtendimentoNaoEncontrada("Fia não encontrada");
+        }
+
+        repository.deleteById(idFila);
+    }
 }

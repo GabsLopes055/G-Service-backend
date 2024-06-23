@@ -39,10 +39,18 @@ public class FilaAtendimentoController {
 
         FilaAtendimentoResponse filaEditada = service.editarFilaAtendimento(idFilaAtendimento, request);
 
-        System.out.println(filaEditada.getIdFila());
-        System.out.println(filaEditada.getNomeFila());
-
         return ResponseEntity.status(HttpStatus.OK).body(filaEditada);
     }
+
+    /*metodo para deletar uma fila*/
+    @DeleteMapping("/deletar-fila/{idFila}")
+    public ResponseEntity deletarFilaAtendimento(@PathVariable(value = "idFila") String idFila) {
+
+        service.deletarFilaAtendimento(idFila);
+
+        return ResponseEntity.noContent().build();
+
+    }
+
 
 }
