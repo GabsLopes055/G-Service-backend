@@ -1,4 +1,4 @@
-package com.g_service.back_end.domain.user;
+package com.g_service.back_end.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

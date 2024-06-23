@@ -3,7 +3,7 @@ package com.g_service.back_end.services;
 import com.g_service.back_end.DTOs.request.LoginRequest;
 import com.g_service.back_end.DTOs.response.LoginResponse;
 import com.g_service.back_end.domain.repositories.UsuarioRepository;
-import com.g_service.back_end.domain.user.Usuario;
+import com.g_service.back_end.domain.entities.Usuario;
 import com.g_service.back_end.infra.security.TokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;

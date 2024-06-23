@@ -3,7 +3,7 @@ package com.g_service.back_end.services;
 import com.g_service.back_end.DTOs.request.UsuarioRequest;
 import com.g_service.back_end.DTOs.response.UsuarioResponse;
 import com.g_service.back_end.domain.repositories.UsuarioRepository;
-import com.g_service.back_end.domain.user.Usuario;
+import com.g_service.back_end.domain.entities.Usuario;
 import com.g_service.back_end.services.exceptions.UsuarioJaExisteCadastrado;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;

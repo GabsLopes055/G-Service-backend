@@ -1,7 +1,7 @@
 package com.g_service.back_end.infra.security;
 
 import com.g_service.back_end.domain.repositories.UsuarioRepository;
-import com.g_service.back_end.domain.user.Usuario;
+import com.g_service.back_end.domain.entities.Usuario;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -4,9 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.g_service.back_end.domain.user.Usuario;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
+import com.g_service.back_end.domain.entities.Usuario;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;

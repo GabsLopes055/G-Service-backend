@@ -1,6 +1,6 @@
 package com.g_service.back_end.domain.repositories;
 
-import com.g_service.back_end.domain.user.Usuario;
+import com.g_service.back_end.domain.entities.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,6 +1,6 @@
 package com.g_service.back_end.DTOs.response;
 
-import com.g_service.back_end.domain.user.Usuario;
+import com.g_service.back_end.domain.entities.Usuario;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
