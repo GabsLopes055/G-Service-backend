@@ -33,5 +33,16 @@ public class FilaAtendimentoController {
         return ResponseEntity.status(HttpStatus.OK).body(service.listarTodasFilasDeAtendimento());
     }
 
+    /*metodo para editar uma fila de atendimento*/
+    @PutMapping("/editar-fila/{idFila}")
+    public ResponseEntity<FilaAtendimentoResponse> editarFilaDeAtendimento(@PathVariable(value = "idFila") String idFilaAtendimento, @RequestBody FilaAtendimentoRequest request) {
+
+        FilaAtendimentoResponse filaEditada = service.editarFilaAtendimento(idFilaAtendimento, request);
+
+        System.out.println(filaEditada.getIdFila());
+        System.out.println(filaEditada.getNomeFila());
+
+        return ResponseEntity.status(HttpStatus.OK).body(filaEditada);
+    }
 
 }
