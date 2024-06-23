@@ -4,11 +4,11 @@ import com.g_service.back_end.DTOs.request.FilaAtendimentoResponse;
 import com.g_service.back_end.DTOs.response.FilaAtendimentoRequest;
 import com.g_service.back_end.services.FilaAtendimentoService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("fila-atendimento")
@@ -17,6 +17,7 @@ public class FilaAtendimentoController {
 
     private final FilaAtendimentoService service;
 
+    /*Metodo para salvar uma fila*/
     @PostMapping("/salvarFila")
     public ResponseEntity<FilaAtendimentoResponse> salvarFila(@RequestBody FilaAtendimentoRequest fila) {
 
@@ -24,6 +25,12 @@ public class FilaAtendimentoController {
 
         return ResponseEntity.ok(response);
 
+    }
+
+    /*metodo para listar todas as filas*/
+    @GetMapping("/listar-todas-filas")
+    public ResponseEntity<List<FilaAtendimentoResponse>> listarTodasFilas() {
+        return ResponseEntity.status(HttpStatus.OK).body(service.listarTodasFilasDeAtendimento());
     }
 
 
