@@ -16,4 +16,10 @@ public class FilaAtendimento {
 
     private String nomeFilaAtendimento;
 
+    private String descricao;
+
+    @Column(length = 65555)
+    private StringBuffer informacoes;
+
+    private String urlImagem;
 }

@@ -16,12 +16,21 @@ public class FilaAtendimentoResponse {
 
     private String nomeFila;
 
+    private String descricao;
+
+    private String urlImagem;
+
+    private StringBuffer informacoes;
+
     public static FilaAtendimentoResponse fromEntity(FilaAtendimento filaSalva) {
 
         FilaAtendimentoResponse response = new FilaAtendimentoResponse();
 
         response.setIdFila(filaSalva.getIdFilaAtendimento());
         response.setNomeFila(filaSalva.getNomeFilaAtendimento());
+        response.setDescricao(filaSalva.getDescricao());
+        response.setUrlImagem(filaSalva.getUrlImagem());
+        response.setInformacoes(filaSalva.getInformacoes());
 
         return response;
 

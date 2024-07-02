@@ -25,6 +25,9 @@ public class FilaAtendimentoService {
         FilaAtendimento fila = new FilaAtendimento();
 
         fila.setNomeFilaAtendimento(request.getNomeFila());
+        fila.setDescricao(request.getDescricao());
+        fila.setUrlImagem(request.getUrlImagem());
+        fila.setInformacoes(request.getInformacoes());
 
         FilaAtendimento filaSalva = repository.save(fila);
 
@@ -57,6 +60,9 @@ public class FilaAtendimentoService {
         }
 
         filaAtendimento.get().setNomeFilaAtendimento(request.getNomeFila());
+        filaAtendimento.get().setDescricao(request.getDescricao());
+        filaAtendimento.get().setUrlImagem(request.getUrlImagem());
+        filaAtendimento.get().setInformacoes(request.getInformacoes());
 
         FilaAtendimento salvarFila = repository.save(filaAtendimento.get());
 

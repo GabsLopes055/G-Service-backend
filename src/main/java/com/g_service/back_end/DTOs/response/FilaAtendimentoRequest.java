@@ -13,6 +13,12 @@ public class FilaAtendimentoRequest {
 
     private String nomeFila;
 
+    private String descricao;
+
+    private String urlImagem;
+
+    private StringBuffer informacoes;
+
 //    private List<Usuario> listaUsuarios;
 
 }
